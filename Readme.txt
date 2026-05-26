@@ -1,9 +1,5 @@
 # Diabetic Retinopathy Grading Scripts
 
-GitHub Repo Link: https://github.com/Tempest-Kohaku/Diabetic-Retinopathy-Grading-Group-34.git 
-
-Website Link: https://huggingface.co/spaces/Kratos7270/Diabetic-Retinopathy-Scanner 
-
 This Zip folder contains three Python scripts for preparing images, training the model, and testing.
 
 ## 1. `preprocessing.py`
