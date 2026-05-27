@@ -123,8 +123,8 @@ class Config:
     experiment_tag: str = "exp_parallel_effb4_swinb384_corn_fusion_head"
     split_tag: str = "dr_fixed_split_v1"
 
-    data_dir: Path = Path(r"/user/HS401/bs01338/Downloads/CLAHE/Train")
-    csv_path: Path = Path(r"/user/HS401/bs01338/Downloads/DRG Dataset 384/train.csv")
+    data_dir: Path = Path(r"...")
+    csv_path: Path = Path(r"...")
 
     image_col: str = "image"
     label_col: str = "level"
