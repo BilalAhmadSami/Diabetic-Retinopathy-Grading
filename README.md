@@ -132,6 +132,13 @@ CORN loss was selected for the final model as it explicitly models the ordinal s
 | Parallel + linear + CORN | 0.6182 | 0.8061 | 0.6063 | 0.8017 |
 | **Final: Parallel + CORN + Random Erasing** | **0.6250** | **0.8096** | **0.6188** | **0.8077** |
 
+
+### Confusion Matrix — Final Model (Test Set)
+
+![Confusion matrix of the final parallel EfficientNetB4 + Swin-B + CORN model on the test set](confusion_matrix.png)
+
+Most predictions cluster on or near the diagonal, consistent with the ordinal nature of DR grading — errors tend to occur between adjacent severity grades rather than distant ones.
+
 ---
 
 ## Training Setup
