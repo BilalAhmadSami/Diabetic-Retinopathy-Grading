@@ -85,12 +85,11 @@ class Config:
 
     experiment_name: str = "exp_parallel_effb4_swinb384_corn_fusion_head_test"
 
-    model_path: Path = Path("/user/HS401/bs01338/Downloads/DRG/Diabetic-Retinopathy-Grading-Group-34/outputs/"
-                            "exp_parallel_effb4_swinb384_corn_fusion_head/models/model_epoch_015_qwk_0.8122.pth"
+    model_path: Path = Path("..."
     )
 
-    test_dir: Path = Path("/user/HS401/bs01338/Downloads/CLAHE/Test")
-    csv_path: Path = Path("/user/HS401/bs01338/Downloads/DRG Dataset 384/test.csv")
+    test_dir: Path = Path("...")
+    csv_path: Path = Path("...")
 
     image_col_options: tuple = ("image", "filename")
     label_col_options: tuple = ("level", "class")
