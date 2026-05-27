@@ -3,6 +3,8 @@
 
 > MSc Artificial Intelligence — University of Surrey | Individual Contribution to Group Project
 
+[![Live Demo](https://img.shields.io/badge/🤗%20HuggingFace-Live%20Demo-yellow)](https://huggingface.co/spaces/DRG-Group-34/Diabetic_Retinopathy_Grading)
+
 ---
 
 ## Overview
@@ -10,6 +12,14 @@
 This project develops an automated deep learning pipeline to grade **Diabetic Retinopathy (DR)** severity from retinal fundus images. DR is classified into five ordinal severity levels (0–4), ranging from no disease to proliferative retinopathy.
 
 Because the labels represent monotonically increasing disease severity, the problem is framed as an **ordinal classification** task rather than standard multiclass classification. The final model is a parallel dual-backbone fusion of EfficientNetB4 and Swin Transformer Base, trained with **CORN (Conditional Ordinal Regression Networks) loss**, achieving a **Test QWK of 0.8077**.
+
+---
+
+## Live Demo
+
+The final model is deployed as an interactive web application on Hugging Face Spaces. Upload a retinal fundus image and the app returns the predicted DR severity grade (0–4).
+
+**[Try the app → Diabetic Retinopathy Grading on Hugging Face](https://huggingface.co/spaces/DRG-Group-34/Diabetic_Retinopathy_Grading)**
 
 ---
 
@@ -147,6 +157,26 @@ CORN loss was selected for the final model as it explicitly models the ordinal s
 - **Series fusion** was ineffective; **parallel fusion** consistently outperformed all other architectures
 - **CORN loss** improved over standard cross-entropy by respecting the ordinal structure of DR grades
 - Checkpoint selection by **validation QWK** (rather than loss) was essential, as later epochs exhibited overfitting
+
+---
+
+## Usage
+
+```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# 1. Preprocess retinal images (RFOV Cropping + CLAHE)
+python Preprocessing.py
+
+# 2. Train the model (update paths in Train.py Config before running)
+python Train.py
+
+# 3. Evaluate on the test set (update paths in Test.py Config before running)
+python Test.py
+```
+
+> Update the `data_dir`, `csv_path`, and `model_path` fields in the `Config` dataclass at the top of each script to point to your local dataset and checkpoint.
 
 ---
 
